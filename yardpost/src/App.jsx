@@ -251,7 +251,7 @@ export default function App() {
     setLocating(true);
     navigator.geolocation.getCurrentPosition(
       pos => { setUserLat(pos.coords.latitude); setUserLng(pos.coords.longitude); setLocating(false); setSortBy("distance"); },
-      () => { setLocating(false); alert("Couldn't get your location."); }
+      () => { setLocating(false); alert("Couldn't get your location. Please allow location access in your browser settings and try again."); }
     );
   };
 
